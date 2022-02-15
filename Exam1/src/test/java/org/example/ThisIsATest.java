@@ -29,6 +29,14 @@ public class ThisIsATest {
     }
 
     @Test
+    public void wrongNameCorrectPasswdWithAssert(){
+        String name = "admin1";
+        String passwd = "123456789123";
+        System.out.println("Error on test because the username is -> "+name+" and passwd is ->"+passwd); //TODO: CHANGE THE OUTPUT MESSAGE
+        assert(service.changePassword(name,passwd));
+    }
+
+    @Test
     public void wrongPasswordButCorrectDefaultName(){
         passwd = "12345";
         System.out.println("The passwd is false because it needs to be at least 8 digits"); //TODO: CHANGE THE OUTPUT MESSAGE
